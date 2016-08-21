@@ -1,0 +1,2 @@
+json_key_file "/Users/kohei/program/android/certificate/Google Play Android Developer-b5ad87bfe729.json" # Path to the json secret file - Follow https://github.com/fastlane/supply#setup to get one
+package_name "com.gupuru.fastlanesample" # e.g. com.krausefx.app

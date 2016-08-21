@@ -5,16 +5,29 @@ android {
     buildToolsVersion "24.0.0"
 
     defaultConfig {
-        applicationId "gupuru.fastlanesample"
+        applicationId "com.gupuru.fastlanesample"
         minSdkVersion 19
         targetSdkVersion 24
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "1.0.2"
     }
+
+    signingConfigs {
+        release {
+            storeFile rootProject.file("release.jks")
+            storePassword STORE_PASSWORD
+            keyAlias KEY_ALIAS
+            keyPassword KEY_PASSWORD
+        }
+    }
+
+
     buildTypes {
         release {
             minifyEnabled false
+            debuggable false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
 }
